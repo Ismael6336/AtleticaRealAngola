@@ -312,7 +312,7 @@ footer ul li h3{
     }
 
     .card{
-        width: 50vh;
+        max-width: 40vh;
     }
 
     /* Arrumando os Links */
