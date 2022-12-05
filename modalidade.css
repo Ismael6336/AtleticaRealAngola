@@ -392,6 +392,12 @@ footer ul li h3{
         overflow-x: hidden;
     }
 
+    /* Arrumando o botão */
+    
+    .wrapper a {
+        font-size: 3vh;
+    }
+    
     /* Arrumando o Modal */
 
     .modal_h1{
