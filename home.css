@@ -95,9 +95,7 @@ div.dev{
 
     /* background-color: #ebc000f8; */
     background-image: linear-gradient(to left, rgba(241, 182, 31, 0.904), #E9AB0D);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    
     font-family: 'Paytone One', sans-serif;
 }
 
@@ -209,7 +207,13 @@ footer ul {
         transform: scale3d(1,1,1);
         border: 5px solid rgba(255, 255, 255, 0.92);
     }
-
+    
+    /* Arrumando os devs */
+    
+    .devs li h2{
+    font-size: 1rem;
+    }
+    
     /* Arrumando o Carrossel */
     section#carrossel{
         padding-top: 11vh;
