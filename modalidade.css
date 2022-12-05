@@ -203,7 +203,7 @@ p{
 }
 
 .modal_h1{
-    font-size: 2vh;
+    font-size: 3vh;
     color: #27272B;
 }
 
@@ -401,7 +401,7 @@ footer ul li h3{
     /* Arrumando o Modal */
 
     .modal_h1{
-        font-size: 2vh;
+        font-size: 1.5vh;
         color: #27272B;
     }
 
