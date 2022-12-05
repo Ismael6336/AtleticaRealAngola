@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+
+/* Zerando pré definições */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Baloo Bhai 2';
+}
+
+/* Cor de Fundo */
+
+body{
+    background-color:#27272B;
+}
+
+/* Alterando os links */
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #27272B;
+    font-weight: 700;
+    font-family: 'Baloo Bhai 2';
+
+    box-shadow: inset 0 0 0 0 #27272B;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* Alterando o Nav */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    height: 10vh;
+    width: 100%;
+    background-color: #E9AB0D;
+    position: fixed;
+    z-index: 5;
+
+    box-shadow: 0px 2px 2px black;
+}
+ 
+/* Links do Nav */
+
+.logoangola{
+    width: 12vh;
+    margin-top: 1vh;
+} 
+
+ul li a:hover{
+    box-shadow: inset 110px 0 0 0 #27272B;
+    color: #E9AB0D;
+    border-radius: 15px;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 5vh;
+}
+
+nav ul li:last-child{
+    margin-right: 2vh;
+}
+
+/* Fazendo os Cards de Esportes */
+
+.esportes{
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+
+    gap: 5vh;
+
+    margin-bottom: 5vh;
+}
+
+.caixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5vh;
+    max-width: 75vh;
+    max-height: 70vh;
+
+    background: #E9AB0D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.bola{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 80vh;
+    max-height: 80vh;
+
+    background: #757475;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.card div div img{
+    max-width: 35vh;
+    max-height: 35vh;
+}
+
+.card div h2{
+    color:#231F20;
+    line-height: 7vh;
+    font-size: 5vh;
+}
+
+/* Editando os textos */
+
+h1{
+    color: #CA940C;
+    line-height: 15vh;
+    font-size: 10vh;
+    text-transform: uppercase;
+}
+
+p{
+    color: #F2F2F2;
+    line-height: 5vh;
+    font-size: 3vh;
+    padding: 0 0 1vh 0;
+    
+    text-align: center;
+}
+
+/* Criando o Modal */
+
+/* Botão para acessar o modal */
+.wrapper{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 0;
+}
+
+.wrapper a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 2vh 15vh;
+    background-color: #E9AB0D;
+    border-radius: 2vh;
+
+    font-family: 'Baloo Bhai 2';
+    font-size: 5vh;
+    font-weight: 700;
+
+    color: #27272B;
+}
+
+/* Modal */
+
+.modal{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #27272b60;
+    z-index: 6;
+
+    transition: all .4s;
+}
+
+.modal_h1{
+    font-size: 2vh;
+    color: #27272B;
+}
+
+.modal_conteudo{
+    border-radius: 2vh;
+    position: relative;
+    width: 100vh;
+    background-color: #27272B;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_fechar{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.modal:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_cabecalho{
+    background-color: #E9AB0D;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 3em 0 3em;
+    border-radius: 2vh 2vh 0 0;
+}
+
+.modal_cabecalho img{
+    margin: 3vh 0 0 1vh;
+    max-width: 10vh;
+    max-height: 10vh;
+}
+
+/* Forms do Modal */
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vh;
+}
+
+.text_infos{
+    color: #F2F2F2;
+}
+
+input, .enviar{
+    font-family: 'Baloo Bhai 2';
+    background: #E9AB0D;
+    color: #27272B;
+    border: 0px;
+    padding: 1.5vh;
+    margin-bottom: 2vh;
+    border-radius: 5vh;
+    font-weight: 700;
+}
+
+input::placeholder{
+    color: #27272B;
+}
+
+h4{
+    text-align: center;
+    font-size: 3vh;
+    color: #E9AB0D;
+}
+
+.limite{
+    text-align: center;
+    font-size: 2vh;
+    padding: 1vh 0 0 0;
+}
+
+.text_radios{
+    margin-left: 1vh;
+    color: #F2F2F2;
+}
+
+.radios{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+input[type=checkbox] {
+    position: relative;
+      cursor: pointer;
+}
+
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color:#27272B;
+    border: 1px solid #E9AB0D;
+}
+
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color:#27272B;
+}
+
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid #E9AB0D;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 5px;
+}
+
+.enviar{
+    text-align: center;
+}
+
+/* Fazendo o Footer */
+
+footer{
+    background-color: #E9AB0D;
+    
+    font-family: 'Baloo Bhai 2';
+    box-shadow: 0px -1px 2px black;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    align-items: center;
+}
+
+footer ul li h3{
+    font-size: 20px;
+    margin-top: 0.3vh;
+    line-height: 35px;
+    
+    margin-bottom: 0;
+}
+
+/* Fazendo a Responsividade */
+
+/* Criando Menu Responsivo */
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+/* Fazendo o icone das três barras */
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+
+@media screen and (max-width: 900px){
+    body{
+        overflow-x: hidden;
+    }
+
+    /* Arrumando o Modal */
+
+    .modal_h1{
+        font-size: 2vh;
+        color: #27272B;
+    }
+
+    .modal_conteudo{
+        border-radius: 2vh;
+        position: relative;
+        width: auto;
+        max-width: 80%;
+        background-color: #27272B;
+    
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .modal_fechar{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .modal_cabecalho{
+        background-color: #E9AB0D;
+        display: flex;
+        justify-content: space-evenly;
+        padding: .5em 2em 0 2em;
+        border-radius: 2vh 2vh 0 0;
+    }
+    
+    .modal_cabecalho img{
+        margin: 3vh 0 0 1em;
+        max-width: 10vh;
+    }
+    
+    /* Arrumando o Forms */
+
+    form{
+        padding: 1vh;
+    }
+    
+    .text_infos{
+        font-size: 2vh;
+        color: #F2F2F2;
+    }
+    
+    input, .enviar{
+        font-family: 'Baloo Bhai 2';
+        background: #E9AB0D;
+        color: #27272B;
+        border: 0px;
+        padding: 1vh;
+        margin-bottom: 1vh;
+        border-radius: 5vh;
+        font-weight: 700;
+    }
+
+    /* Arrumando os Cards */
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    
+        text-align: center;
+    }
+
+    .card div div img{
+        max-width: 15vh;
+        max-height: 15vh;
+    }
+
+    .bola{
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .caixa{
+        padding: 5vh;
+        width: auto;
+    }
+
+    /* Arrumando os textos */
+
+    h1{
+        font-size: 5vh;
+    }
+
+    p{
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    /* Arrumando os Links */
+
+    nav ul li a{
+        font-size: 15px;
+    }
+
+    /* Arrumando o Footer */
+
+    footer ul li h3{
+        font-size: 2vh;
+    }
+
+    ul li a:hover{
+    font-weight: 700;
+    font-family: 'Baloo Bhai 2';
+    box-shadow: none;
+    color: #27272B;
+    }
+
+    /* Refazendo o Nav */
+    .nav-list{
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 50vh;
+        height: 92vh;
+
+        background: #E9AB0D;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+
+        box-shadow: -1px 4px 5px -1px #27272B;
+
+        padding-left: 0;
+    }
+
+    .nav-list li{
+        background-color: #d49b0b;
+        width: 100%;
+        margin-left: 0;
+        opacity: 0;
+        text-align: center;
+    }
+
+    .nav-list li a{
+        line-height: 10vh;
+        color: #27272B;
+    }
+
+    nav ul li:last-child{
+        margin-right: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+
+    .nav-list.active{
+        transform: translateX(0);
+    }
+
+    nav{
+        justify-content: space-between;
+    }
+
+    nav ul li a{
+        color: #27272B;
+    }
+
+    /* Transformando as três barras em um X */
+
+    .mobile-menu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    .mobile-menu.active .line2{
+        opacity: 0;
+    }
+
+    .mobile-menu.active .line3{
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+    /* Animação usando JS */
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+}
